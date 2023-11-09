@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+setlocale(0, " ");
 char operatorSymbol;
 double num1, num2;
 
