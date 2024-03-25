@@ -1,36 +1,137 @@
-#include
-using namespace std;
+import 'package:flutter/material.dart';
 
-int main() {
-char operatorSymbol;
-double num1, num2;
+void main() {
+  runApp(const MyApp());
 
-cout << "Введите оператор (+, -, *, /): ";
-cin >> operatorSymbol;
-
-cout << "Введите два числа: ";
-cin >> num1 >> num2;
-
-switch (operatorSymbol) {
-case '+':
-cout << num1 << " + " << num2 << " = " << num1 + num2;
-break;
-case '-':
-cout << num1 << " - " << num2 << " = " << num1 - num2;
-break;
-case '*':
-cout << num1 << " * " << num2 << " = " << num1 * num2;
-break;
-case '/':
-if (num2 != 0)
-cout << num1 << " / " << num2 << " = " << num1 / num2;
-else
-cout << "Ошибка: Деление на ноль запрещено!";
-break;
-default:
-cout << "Ошибка: Введен недопустимый оператор.";
-break;
 }
 
-return 0;
+class MyApp extends StatelessWidget {
+  const MyApp
+
+  ({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Column',
+      home: HomePage(),
+    );
+  }
 }
+
+class HomePage extends StatelessWidget{
+  const HomePage ({Key? key}): super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 200,
+                height: 100,
+                margin: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.blue[300],
+                  borderRadius: BorderRadius.circular(30),
+
+                ),
+                child: const Center(child:
+                Text('1', style:
+                TextStyle(color: Colors.white ,
+                  fontSize: 32,
+                ),
+
+                )
+                )
+              ),
+
+              Container(
+                  width: 200,
+                  height: 100,
+                  margin: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[400],
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: const Center(child:
+                  Text('2', style:
+                  TextStyle(color: Colors.white,
+                    fontSize: 32,
+                  ),
+
+                  )
+                  )
+              ),
+
+              Container(
+                  width: 200,
+                  height: 100,
+                  margin: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[500],
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: const Center(child:
+                  Text('3', style:
+                  TextStyle(color: Colors.white,
+                    fontSize: 32,
+                  ),
+
+                  )
+                  )
+              ),
+
+              Container(
+                  width: 200,
+                  height: 100,
+                  margin: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[600],
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: const Center(child:
+                  Text('4', style:
+                  TextStyle(color: Colors.white,
+                    fontSize: 32,
+                  ),
+
+                  )
+                  )
+              ),
+
+              Container(
+                  width: 200,
+                  height: 100,
+                  margin: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[700],
+                    borderRadius: BorderRadius.circular(30),
+
+                  ),
+                  child: const Center(child:
+                  Text('5', style:
+                  TextStyle(color: Colors.white,
+                    fontSize: 32,
+                  ),
+
+                  )
+                  )
+              ),
+            ]
+
+        ),
+
+      ),
+
+    );
+
+
+  }
+ }
